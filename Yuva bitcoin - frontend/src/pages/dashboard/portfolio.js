@@ -128,9 +128,9 @@ const Page = () => {
             <Typography variant="h4">Yuva Bitcoin Daily Insights</Typography>
           </Grid>
 
-          <Grid item xs={6} md={3}>
+          {/* <Grid item xs={6} md={3}>
             <OverviewRegisteredMembers amount={dummy.totalRegisteredMembers} />
-          </Grid>
+          </Grid> 
           <Grid item xs={6} md={3}>
             <OverviewCoinHolders amount={dummy.totalCoinHolders} />
           </Grid>
@@ -139,7 +139,7 @@ const Page = () => {
           </Grid>
           <Grid item xs={6} md={3}>
             <OverviewTotalYuvaBuy amount={dummy.totalBuyTodayYuva} />
-          </Grid>
+          </Grid> */}
 
             <Grid item xs={12}>
               <Typography variant="h4">Overview</Typography>

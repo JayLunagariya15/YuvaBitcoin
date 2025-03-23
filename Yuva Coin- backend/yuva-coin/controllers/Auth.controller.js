@@ -336,23 +336,42 @@ async function sendOTP(email, otp, member_name) {
     // html = html.replace('<img src="./images/yuva200px.png" alt="logo"', `<img src="data:image/png;base64,${base64Image}" alt="logo"`);
 
 
-    const transporter = nodemailer.createTransport({
-      host: 'smtp.hostinger.com',
-      port: 465,
-      secure: true, // Set to true for a secure connection
-      auth: {
-        user: 'no-reply@yuvabitcoin.com', // Your Gmail email address
-        pass: 'Yuvabitcoin@1234' // Your Gmail password
-      }
-    });
+    // const transporter = nodemailer.createTransport({
+    //   host: 'smtp.gmail.com',
+    //   port: 587,
+    //   secure: false, // Set to true for a secure connection
+    //   auth: {
+    //     user: '191260107039setice@gamil.com', // Your Gmail email address
+    //     pass: 'yuts qvzx fuqs gbtz' // Your Gmail password
+    //   }
+    // });
 
-    const mailOptions = {
-      from: 'no-reply@yuvabitcoin.com',
-      to: email,
-      subject: 'OTP Verification',
-      // text: `Your OTP for registration is: ${otp}`
-      html: html
-    };
+    // const mailOptions = {
+    //   from: '191260107039setice@gamil.com',
+    //   to: email, 
+    //   subject: 'OTP Verification',
+    //   // text: `Your OTP for registration is: ${otp}`
+    //   html: html
+    // };
+
+    const transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 587,
+        secure: false, // Use false for TLS
+        auth: {
+          user: '191260107039setice@gmail.com', // Your Gmail email address
+          pass: 'yuts qvzx fuqs gbtz' // Your app password
+        }
+      });
+    
+      const mailOptions = {
+        from: '191260107039setice@gmail.com',
+        to: email, // Change this to a valid recipient email
+        // subject: 'Test Email',
+        // text: 'This is a test email sent using Nodemailer!'
+        subject: 'OTP Verification',
+        html: html
+      };
 
     await transporter.sendMail(mailOptions);
     console.log('OTP sent successfully.', email, otp);
@@ -387,21 +406,40 @@ async function sendOTPForgotPassword(email, otp, member_name) {
     // html = html.replace('<img src="./images/yuva200px.png" alt="logo"', `<img src="data:image/png;base64,${base64Image}" alt="logo"`);
 
 
+    // const transporter = nodemailer.createTransport({
+    //   host: 'smtp.gmail.com',
+    //   port: 587,
+    //   secure: false, // Set to true for a secure connection
+    //   auth: {
+    //     user: '191260107039setice@gamil.com', // Your Gmail email address
+    //     pass: 'yuts qvzx fuqs gbtz' // Your Gmail password
+    //   }
+    // });
+
+    // const mailOptions = {
+    //   from: '191260107039setice@gamil.com',
+    //   to: email,
+    //   subject: 'OTP Verification',
+    //   // text: `Your OTP for registration is: ${otp}`
+    //   html: html
+    // };
+
     const transporter = nodemailer.createTransport({
-      host: 'smtp.hostinger.com',
-      port: 465,
-      secure: true, // Set to true for a secure connection
+      host: 'smtp.gmail.com',
+      port: 587,
+      secure: false, // Use false for TLS
       auth: {
-        user: 'no-reply@yuvabitcoin.com', // Your Gmail email address
-        pass: 'Yuvabitcoin@1234' // Your Gmail password
+        user: '191260107039setice@gmail.com', // Your Gmail email address
+        pass: 'yuts qvzx fuqs gbtz' // Your app password
       }
     });
-
+  
     const mailOptions = {
-      from: 'no-reply@yuvabitcoin.com',
-      to: email,
+      from: '191260107039setice@gmail.com',
+      to: email, // Change this to a valid recipient email
+      // subject: 'Test Email',
+      // text: 'This is a test email sent using Nodemailer!'
       subject: 'OTP Verification',
-      // text: `Your OTP for registration is: ${otp}`
       html: html
     };
 
